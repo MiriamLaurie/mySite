@@ -1,0 +1,136 @@
+.s4
+    background: $dark-bg
+    padding-bottom: 50px
+    border-top-right-radius: 40% 10%
+    border-top-left-radius: 40% 10%
+    border-bottom-right-radius: 40% 10%
+    border-bottom-left-radius: 40% 10%
+@mixin before
+    &:before
+        content: ""
+        position: absolute
+        width: 100%
+        height: 1px
+        background-color: $light-color
+        bottom: 0
+        left: 0
+
+.calc
+    max-width: 90%
+    border: 2px solid $light-color
+    margin: 40px auto
+    display: flex
+    flex-direction: column
+    align-items: center
+    justify-content: top	
+
+.tabs
+    width: 100%
+    padding-top: 26px
+    padding-bottom: 35px
+    display: flex
+    justify-content: center
+    .tab-left, .tab-right
+        width: 200px
+        height: 45px
+        border-radius: 0 25px 0 0		
+        background: $light-color
+        margin-right: 5px
+        padding: 5px
+        color: $dark-color
+        font-size: 18px
+        font-weight: 500
+        text-align: center
+        line-height: 45px
+        cursor: pointer
+    .tab-left
+        border-radius: 25px 0 0 0
+    .light-color
+        background: $light-color
+        color: #000
+        position: relative
+        &:before
+            content: ""
+            position: absolute
+            width: 200px
+            height: 1px
+            background-color: $light-color
+            left: 0
+            bottom: -6px
+
+.counter
+    width: 132px
+    height: 60px
+    border: 3px solid $light-color
+    background-color: transparent
+    text-align: center
+    color: #fff
+    font-size: 48px
+    font-weight: 700
+
+
+.blocks
+    width: 65%
+    margin: 40px auto
+    display: flex
+    justify-content: center
+    align-items: center
+    &-title
+        margin-right: 25px
+        position: relative
+        color: #ffffff
+        font-size: 30px
+        font-weight: 500
+        // @include before
+
+
+#pages-block
+    display: none
+
+.addition
+    margin-top: 30px
+    font-size: 30px
+    font-weight: 500
+    color: $light-color
+    &-title
+        text-align: center
+    &-block
+        display: flex
+        align-items: center
+        text-align: left
+        margin: 15px
+        color: #fff
+        font-size: 24px
+        input[type="checkbox"]
+            width: 24px
+            height: 24px
+            margin-right: 7px
+            opacity: .5
+			
+
+.total
+    width: 60%
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-top: 60px
+    margin-bottom: 30px
+    color: #ffffff
+    font-size: 36px
+    font-weight: 700
+    &-count
+        width: 200px
+        height: 60px
+        background-color: transparent
+        border: none
+        color: $light-color
+        text-align: right
+        font-size: 56px
+        font-weight: 700
+    
+.notice
+    display: flex
+    padding: 10px
+    &__text
+        margin-left: 5px
+        color: #fff
