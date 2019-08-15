@@ -3,21 +3,103 @@
     border-top-right-radius: 40% 10%
     border-top-left-radius: 40% 10%
 .contact
-    &-nav
-        display: flex
-        justify-content: space-around
-        align-items: center
-        
-        &__nav
-            margin: 40px 20px
+    display: flex
+    justify-content: space-around
+    align-items: center
+    padding-bottom: 150px
+    &-btn
+        padding: 15px
+        background-image: linear-gradient(45deg, rgba(23,20,53,1) 0%,rgba(45,42,81,1) 50%,rgba(23,20,53,1) 100%)
+        background-size: 200% auto
+        transition: all .7s
+        color: #ccc
+        text-transform: uppercase
+        font-size: 16px
+        letter-spacing: 2px
+        border-radius: 20px
+        &:hover
+            background-position: right center
+    &-media
 
         &__icon
-            display: flex
-            width: 100px
+            margin-right: 15px
             &:hover
                 border-radius: 50% 50%
-                box-shadow: 5px 5px 15px 0px rgba(112,241,254,.75)
-        &__ul
+                box-shadow: 0px 0px 20px 0px rgba(112,241,254,.75)
+        &__nav
             display: flex
+            align-items: center
+            padding: 15px 0
+            color: #ccc
+            font-size: 20px
+        &__subtitle
+            color: #ccc
+            font-size: 18px
+            margin-top: 30px
+    &-form
+        position: relative
+        margin: 50px 0
 
+
+.form
+    display: flex
+    flex-direction: column
+    width: 600px
+
+
+
+input,
+textarea
+    font: 16px/24px Arial, sans-serif
+    color: #ccc
+    background: transparent
+    width: 100%
+    box-sizing: border-box
+    letter-spacing: 1px
+    
+
+
+.effect-4:focus
+    padding: 10px 15px 5px
+    transition: 0.4s
+
+.effect-4
+    border: 0
+    padding: 10px 5px
+    border: 2px solid transparent
+    border-bottom-color: $dark-color
+    transition: 0.4s
+    ~ .focus-border
+        position: absolute
+        height: 0
+        bottom: 0
+        left: 0
+        width: 100%
+        transition: 1.2s
+        z-index: -1
+    &:focus ~ .focus-border
+        transition: 1.2s
+        height: 100%
+        border: 1px solid $light-color
+        z-index: 1
+
+
+.move
+    animation-duration: 3s
+    animation-iteration-count: infinite
+    margin: 0 10px 0 auto
+    transform-origin: bottom
+
+.arrow
+    animation-name: arrow
+    animation-timing-function: linear
+
+@keyframes arrow
+    0% 
+        transform: translateY(0) 
+    50% 
+        transform: translateY(-12px) 
+    100% 
+        transform: translateY(0)
+    
 
